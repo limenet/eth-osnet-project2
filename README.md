@@ -9,7 +9,7 @@ another dynamic routing protocol) by having them implement one of these.  The
 student's code will be responsible for maintaining the dynamic routing table and communicating over the dynamic routing protocol with other routers.
 
 To enable students to focus on dynamic routing, the rest of the router is
-provided as the "dr" binary.  This binary relies on an API provided by a shared
+provided as the `dr` binary.  This binary relies on an API provided by a shared
 library to handle dynamic routing - this library will be implemented by
 students.  The student implements the API specified in dr_api.h - initial
 placeholder definitions for the API is in dr_api.c.  The following functions
@@ -83,8 +83,8 @@ Once you have a dr instance attached to each node in the topology, you can enter
 
 ```bash
 lvns> cost set link 10.0.0.0 10.0.0.1 5  # set the cost of a link to 5
-lvns> link del 10.0.0.0 10.0.0.1        # delete a link
-lvns> route get dr1 10.0.0.2           # ask dr1 how it would get to 10.0.0.2
+lvns> link del 10.0.0.0 10.0.0.1         # delete a link
+lvns> route get dr1 10.0.0.2             # ask dr1 how it would get to 10.0.0.2
 ```
 
 **Important note: A next-hop IP of 0.0.0.0 indicates that the next hop is the ultimate destination.** For example, if the router was asked how to route to the subnet 192.168.1.0/24 and it was directly connected to that subnet, then it ought to respond with 0.0.0.0 as the next-hop IP.
